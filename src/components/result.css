@@ -1,0 +1,68 @@
+.result {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  border: 2px solid #ccc;
+  border-radius: 5px;
+  width: 100%;
+  transition: background-color 0.3s, border-color 0.3s;
+}
+
+.resultTitle {
+  font-family: 'Cinzel', cursive;
+  padding: 10px 10px;
+  margin: 0;
+  color: #ccc;
+}
+
+.popLab {
+  padding-left: 2%;
+  margin: 0;
+  margin-bottom: 9px;
+  padding-bottom: 5px;
+  color: #ccc;
+  border-bottom: 1px dotted #ccc;
+}
+
+.popDes,
+.typesList,
+.gScore {
+  padding: 3% 6%;
+  margin: 0;
+  color: #ccc;
+  text-align: center;
+}
+
+.popBlock {
+  background-color: #666;
+  border-top: 1px solid #ccc;
+  padding-top: 10px;
+  padding-bottom: 5px;
+}
+
+.bright {
+  font-size: 1.25rem;
+  color: #eee;
+}
+
+p {
+  font-family: 'Roboto', sans-serif;
+}
+
+/* New styles for active and inactive states */
+.result {
+  background-color: #333; /* Inactive background color */
+}
+
+.result[style*="display: block;"][style*="opacity: 1;"] {
+  background-color: #444; /* Active background color */
+  border-color: #fff; /* Active border color */
+  color: #fff; /* Active text color */
+}
+
+.result[style*="display: block;"][style*="opacity: 0.5;"] {
+  background-color: #555; /* Inactive but visible background color */
+  border-color: #777; /* Inactive but visible border color */
+  color: #777; /* Inactive but visible text color */
+}
+

@@ -1,0 +1,121 @@
+/* menu.css */
+
+.navbar {
+  background-color: black;
+  color: aqua;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.navbar-container {
+  background-color: black;
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.menuTitle {
+  font-size: 23px;
+  font-family: 'Roboto', sans-serif;
+}
+
+.menuTitle.desktop {
+  display: block; /* Visible on larger screens */
+}
+
+.menuTitle.mobile {
+  display: none; /* Hidden by default */
+}
+
+.menuButton {
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 50px;
+  height: 30px;
+  background-color: black;
+  color: aqua;
+  font-size: 18px;
+  font-family: 'Roboto', sans-serif;
+}
+
+.burger {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+}
+
+.menuItems {
+  display: none;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+}
+
+.menuItems.show {
+  display: flex;
+}
+
+.menuItem, .menuItemDisabled {
+  padding: 15px;
+  text-align: center;
+  width: 100%;
+}
+
+.menuItemDisabled {
+  opacity: 0.5;
+}
+
+#docsLink {
+  cursor: pointer;
+}
+
+@media (min-width: 768px) {
+  .menuButton {
+    display: none;
+  }
+  .navbar-container {
+    justify-content: space-between;
+  }
+  .menuItems {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    width: auto;
+    padding-top: 10px;
+  }
+  .menuTitle.desktop {
+    padding-top: 10px;
+    margin-right: auto; /* Align to the left on larger screens */
+  }
+  .menuTitle.mobile {
+    display: none; /* Hide in larger screens */
+  }
+  .menuItem, .menuItemDisabled {
+    width: auto;
+    padding: 15px 20px;
+  }
+}
+
+@media (max-width: 767px) {
+  .menuTitle.desktop {
+    display: none; /* Hide on mobile */
+  }
+  .menuTitle.mobile {
+    display: block; /* Show in dropdown on mobile */
+    padding-top: 10px;
+  }
+  .burger{
+    padding-top: 10px;
+  }
+  .navbar-container {
+    padding: 15px 0;
+  }
+}

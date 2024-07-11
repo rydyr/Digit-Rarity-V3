@@ -1,0 +1,37 @@
+.doc-body {
+    position: relative;
+    display: inline-block;
+    width: 95vw;
+    max-height: 100vh;
+    max-width: 600px;
+    background-color: azure;
+    padding: 7%;
+    overflow-y: scroll;
+}
+.doc-body h1 {
+    font-family: 'Roboto', sans-serif;
+    margin-bottom: -2%;
+    padding-bottom: 0;
+}
+
+.doc-body hr {
+    margin-top: 9%;
+}
+
+
+img {
+    width: 80vw;
+    max-width: 450px;
+    height: auto;
+}
+
+.closeButton {
+    position: sticky;
+    top: 10px;
+    float: right;
+    color: aqua;
+    background-color: black;
+    padding: 10px;
+    z-index: 10;
+    cursor: pointer;
+  }

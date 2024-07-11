@@ -1,0 +1,57 @@
+.featured-names-container {
+    width: 100%;
+    overflow: hidden;
+    background-color: #333;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
+  
+  .marquee {
+    display: flex;
+    width: 100%;
+    white-space: nowrap;
+    overflow: hidden;
+  }
+  
+  .marquee-content {
+    display: flex;
+    animation: scroll var(--scroll-duration) linear infinite;
+  }
+  
+  .featured-name {
+    display: inline-block;
+    padding: 0 35px;
+    font-size: 1.5rem;
+    color: #fff;
+    text-decoration: none;
+  }
+  
+  .featured-name:hover {
+    text-decoration: underline;
+  }
+  
+  @keyframes scroll {
+    0% {
+      transform: translateX(0);
+    }
+    100% {
+      transform: translateX(-50%);
+    }
+  }
+  
+  /* Adjust the scroll duration based on the screen size */
+  :root {
+    --scroll-duration: 60s; /* Default duration */
+  }
+  
+  @media (min-width: 1200px) {
+    :root {
+      --scroll-duration: 60s; /* Duration for larger screens */
+    }
+  }
+  
+  @media (max-width: 768px) {
+    :root {
+      --scroll-duration: 30s; /* Duration for smaller screens */
+    }
+  }
+  
